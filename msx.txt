@@ -4,4 +4,3 @@
 	3.rm
 	4.mkdir
 	5bye
-	6hello
