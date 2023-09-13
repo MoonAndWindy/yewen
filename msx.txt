@@ -1,0 +1,6 @@
+	there are many git opreations in the resposity
+	1.ls
+	2.cp
+	3.rm
+	4.mkdir
+	5bye
