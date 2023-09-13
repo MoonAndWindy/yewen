@@ -1,0 +1,515 @@
+											gitcmd命令
+	内容: 主要熟悉git的命令行操作
+		1.ls	     展示
+		2.cd	     切换d
+		3.cp	     复制
+		4.rm	     删除
+		5.clear      清屏
+		6.*          通配符
+		7.mkdir      make d
+		8.>          flew to 
+		9.touch      make file
+		10.history   list all the cmds have 
+		11.mv        change the file name
+		12.vim(file edit tools)
+		13.cat       read the txt
+   26  git config --list
+   27  git config --global user.name  "Max"
+   28  git config --list
+   29  git remote -v
+   30  git config --unset credential.https://github.com.provider
+   31  git config --unset credential.https://github.com.provider
+   32  git config --unset credential.https://github.com.provider
+   33  git status
+   34  git status
+   35  git config --unset credential.https://github.com.provider
+   36  git config --list
+   37  [200~bare=false
+   38  core.logallrefupdates=true
+   39  core.symlinks=false
+   40  core.ignorecase=true
+   41  remote.origin.url=https://github.com/no-42/YXG_Service.git
+   42  remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
+   43  branch.master.remote=origin
+   44  branch.master.merge=refs/heads/master
+   45  (END)
+   46  git status
+   47  git config --unset credential.https://github.com.provider
+   48  git config --global  --list
+   49  git config --unset credential.https://github.com.provider=github
+   50   git config --unset credential.https://github.com.provider
+   51  git config --global  --list
+   52  git config  --global  --unset  credential.https://github.com.provider
+   53  git config --global --list
+   54  git config --global -v
+   55  git config --global
+   56  edit known_hosts
+   57  git config --global --list 
+   58  git config --list
+   59  git config --global credential.https://github.com.provider generic
+   60  git config --global --list
+   61  git clone 942 MINGW64 /e/B/YXG
+   62  $ https://github.com/yexiuhhd/YXGsite.git
+   63  git clone https://github.com/yexiuhhd/YXGsite.git
+   64  git clone git@github.com:yexiuhhd/YXGsite.git
+   65  git clone https://gitee.com/nageoffer/12306.git
+   66  git clone https://gitee.com/nageoffer/12306.git
+   67  git clone https://github.com/facert/awesome-spider.git
+   68  git clone https://github.com/gxcuizy/Python.git
+   69  ssh -T git@github.com
+   70  ssh -T git@gitee.com
+   71  git config --global -l
+   72  git config --global core.sshCommand
+   73  git config --global sshProxy
+   74  git config core.sshCommand
+   75  git config core.sshProxy
+   76   git config -l
+   77  git init
+   78  git remote add origin https://github.com/MoonAndWindy/test.git
+   79  git branch -M main
+   80  git push -u origin main
+   81  git commit -m "hello world"
+   82  git add.
+   83  git add
+   84  git add .
+   85  git commit -m "hello world"
+   86  git remote -v
+   87  git push -u origin main
+   88   git push -u origin main
+   89  git -T git@github.com
+   90  ssh -T git@github.com
+   91  ssh -T git@gitee.com
+   92  git clone https://github.com/yexiuhhd/YXGsite.git
+   93  git clone https://gitee.com/ssssssss-team/spider-flow.git
+   94  git config -l
+   95  ssh -T git@gitee.com
+   96  git -T git@gitee.com
+   97  ssh -T git@gitee.com
+   98   ssh -T git@gitee.com
+   99   ssh -T git@gitee.com
+  100   ssh -T git@github.com
+  101  ssh moonandwindy@github.com
+  102  ssh -T git@github.com
+  103  git clone https://github.com/facert/awesome-spider.git
+  104  git clone https://gitee.com/ssssssss-team/spider-flow.git
+  105  ssh-keygen -t rsa -C "2152540548@qq.com"
+  106  ssh -T git@github.com
+  107  ssh -T git@gitee.com
+  108  ssh -T git@gitee.com
+  109  ssh -T git@github.com
+  110  ssh -T git@github.com
+  111  ssh -T git@gitee.com
+  112   ssh -T git@gitee.com
+  113  ssh -T git@github.com
+  114  ssh -T git@github.com
+  115  ssh -T git@gitee.com
+  116  ssh -T git@github.com
+  117  git config --global -l
+  118  git config --global --unset credential.https://gitee.com.provider 
+  119  git config --global -l
+  120  ssh -T git@gitee.com
+  121  git config --global credential.https://github.com.username moonandwindy
+  122  git config --global credential.https://github.com.password msx20020703
+  123  git config --global -l
+  124  git config --global --unset credential.https://github.com.username=moonandwindy
+  125  git config --global --unset credential.https://github.com.username
+  126  git config --global --unset credential.https://github.com.password
+  127  git config --global -l
+  128  git config --global  credential.https://github.com generic
+  129  git config --global -l
+  130  git config --global  credential.https://github.com.provide generic
+  131  git config --global --unset credential.https://github.com=generic
+  132   git config --global --unset credential.https://github.com
+  133  ssh -t git@gitee.com
+  134  ssh -
+  135  ssh -t git@github.com
+  136  ssh -t git@gitee.com
+  137  git clone https://gitee.com/ssssssss-team/spider-flow.git
+  138  git clone https://github.com/facert/awesome-spider.git
+  139  git config --global -l
+  140  git config -l
+  141  git remote -v
+  142  git sttus
+  143  git status
+  144  git status
+  145  git status
+  146  git config -l
+  147  git remote -v
+  148  git push -
+  149  git push -u origin
+  150  git push -u origin main
+  151  git config --global http.sslverify false
+  152  git push -u origin main
+  153   git config --global http.sslverify true
+  154  git push -u origin main
+  155  git config --gloable -l
+  156  git config --global -l
+  157  git config --local -l
+  158  git config --local -l
+  159  git -t git@gitee
+  160  ssh -t git@gitee
+  161  ssh -t git@gitee.com
+  162  ssh -t git@gitee.com
+  163  ssh -t git@github.com
+  164  ssh -t git@github.com
+  165  git clone https://github.com/facert/awesome-spider.git
+  166  git clone https://github.com/airingursb/bilibili-user.git
+  167  ssh -t git@github.com
+  168  git clone https://github.com/yexiuhhd/YXGsite.git
+  169  git clone git@github.com:yexiuhhd/YXGsite.git
+  170  git config --local -l
+  171  push remote origin mater
+  172  git push remote origin master
+  173  git push origin master
+  174  git push origin master
+  175  git push origin master
+  176  git config --local -l
+  177  git push origin main
+  178  git push origin master
+  179  git
+  180  git config -local -l
+  181  git config --local -l
+  182  git config --local -l
+  183  git push origin master
+  184  git push origin maste
+  185  git push origin main
+  186  git config --local -l
+  187  git config --local -l
+  188  git push origin master
+  189  ssh -t git@gitee.com
+  190  git config --local -l
+  191   ssh -t git@gitee.com
+  192  ssh -t git@gitee.com
+  193  ssh -t git@gitee.com
+  194  git config --global http.sslVerify false
+  195  git push origin main
+  196  git push origin master
+  197   git push origin main
+  198   git push origin maater
+  199  git push origin master
+  200  git config --global http.sslVerify true
+  201  git config --global -l
+  202  git clone https://github.com/yexiuhhd/YXGsite.git
+  203  git clone git@github.com:yexiuhhd/YXGsite.git
+  204  git clone https://github.com/xiufengcheng/DATASTRUCTURE.git
+  205  git config --global http.sslCAInfo E:\Git_Set_Up\Git\mingw64\ssl\certs\ca-bundle.crt
+  206  ssl -t git@gitee.com
+  207  ssh -t git@gitee.com
+  208  git config --global unset  http.sslCAInfo
+  209  git config --global -l
+  210  git config --global --unset  http.sslCAInfo
+  211  git config --global -l
+  212  ssh -t git@gitee.com
+  213  ssh -t git@gitee.com
+  214  ssl -t git@gitee.com
+  215  git config --local -l
+  216  git config -local -l
+  217  git config --local -l
+  218  git push origin master
+  219  git config --global -l
+  220  ssh -t git@gitee.com
+  221  ssh -t git@github.com
+  222  git config --global -l
+  223  git config --local -l
+  224  git config --local -l
+  225  git push origin main
+  226  git remote rm origin
+  227  git remote -l
+  228  git remote -list
+  229  git remote -v
+  230  git config --local -l
+  231  git remote add git@github.com:MoonAndWindy/test.git
+  232   git remote add origin git@github.com:MoonAndWindy/test.git
+  233  git remote -v
+  234  git push remote -u main 
+  235  git push origin main
+  236  git clone git@github.com:xiufengcheng/DATASTRUCTURE.git
+  237  git clone https://github.com/xiufengcheng/DATASTRUCTURE.git
+  238  git clone git@github.com:xiufengcheng/DATASTRUCTURE.git
+  239  git -v
+  240  git config --global -v 
+  241  git config --global -l
+  242  ssh -t git@gitee.com
+  243  ssh -t git@github.com
+  244  git clone https://github.com/xiufengcheng/DATASTRUCTURE.git
+  245  git clone git@github.com:xiufengcheng/DATASTRUCTURE.git
+  246  ssh -t git@github.com
+  247  ssh -t git@gitee.com
+  248   ssh -t git@gitee.com
+  249  ssh -t git@github.com
+  250  ssh -T git@github.com
+  251   ssh -T git@github.com
+  252   ssh -T git@github.com
+  253   ssh -T git@github.com
+  254  ssh -t git@gitee.com
+  255  ssh -t git@github.com
+  256  ssh -t git@github.com
+  257  ssh -t git@gitee.com
+  258  ssh -t git@github.com
+  259  ssh -t git@gitee.com
+  260  ssh -t git@github.com
+  261  ssh -t git@github.com
+  262  ssh -t git@gitee.com
+  263  ssh -t git@gitee.com
+  264  ssh -t git@github.com
+  265  ssh-t git@github.com
+  266  $ ssh -t git@github.com
+  267  ssh -t git@github.com
+  268  ssh -t git@github.com
+  269  ssh -t git
+  270  ssh -t 
+  271  ssh -t git@gitee.com
+  272  ssh -t git@github.com
+  273  ssh -t git@gitee.com
+  274  ssh -t git@github.com
+  275  ssh -t git
+  276  @github.com
+  277  ssh -t git@gitee.com
+  278  ssh -t git@github.com
+  279  ssh -t git@github.com
+  280  ssh -t git@gitee.com
+  281  ssh -t git@gitee.com
+  282  ssh -t git@gitee.com
+  283  ssh -t git@github.com
+  284  git clone https://github.com/facert/WechatEnterpriseSDK.git
+  285  ssh -t git@gitee.com
+  286  ssh -t git@github.com
+  287  git clone https://github.com/facert/WechatEnterpriseSDK.git
+  288  git push origin main
+  289  git config --local -l
+  290  git push origin main
+  291  ssh -t git@github.com
+  292  git clone https://github.com/algorithmzuo/algorithm-primary.git
+  293  git add .
+  294  git commit "Max-version"
+  295  git commit "Max"
+  296  git commit ""
+  297  git commit .
+  298  git push origin main
+  299  git push origin main
+  300  git push origin master
+  301  git push origin master
+  302  git config --local -l
+  303  git remote -v
+  304  git remote remove origin
+  305  git remote add origin git@github.com:no-42/YXG_Service.git
+  306  git remote -v
+  307  git push origin master
+  308  git clone git@github.com:yexiuhhd/YXGsite.git
+  309  git push origin master
+  310  ssh -t git@gitee.com
+  311  ssh -t git@github.com
+  312  ssh -t git@gitee.com
+  313  ssh -t git@github.com
+  314  git push origin master
+  315  git push origin main
+  316  ssh -t git@gitee.com
+  317  ssh -t git@gitee.com
+  318  ssh -t git@github.com
+  319  git push origin main
+  320  git clone https://github.com/MoonAndWindy/test.git
+  321  push remote origin main
+  322  git push origin main
+  323  git clone git@github.com:flameshot-org/flameshot.git
+  324  ssh -t git@gitee.com
+  325  ssh -t git@github.com
+  326  git clone git@github.com:wangshusen/SearchEngine.git
+  327  git clone git@github.com:wangshusen/SearchEngine.git
+  328  git
+  329  git clone git@github.com:jeecgboot/JimuReport.git
+  330  git remote add origin https://gitee.com/codeduck123/2023-8-26zaixiankecheng.git
+  331  git remote -v
+  332  . git
+  333  git global config -v
+  334  git config --global --list
+  335  git remote add origin https://gitee.com/codeduck123/2023-8-26zaixiankecheng.git
+  336  git config --list
+  337  git init
+  338  git remote add origin https://gitee.com/codeduck123/2023-8-26zaixiankecheng.git
+  339  git push origin 
+  340  git push origin master
+  341  ssl git@gitee.com
+  342  ssh git@gitee.com
+  343  git push origin main
+  344  git commit "Max2023-8-26"
+  345  git commit -m "Max2023-8-26"
+  346  git init
+  347   git commit -m "Max2023-8-26"
+  348  git add .git
+  349  git commit -m "Max2023-8-26"
+  350  git init 
+  351  git add .git
+  352  git commit -m "Max2023-8-26"
+  353  git remote add origin https://gitee.com/codeduck123/2023-8-26zaixiankecheng.git
+  354  git push -u origin "master"
+  355  git global config -list
+  356  git config -global -list
+  357  clear
+  358  git config --global -list
+  359  clear
+  360  git config --global --list
+  361  git add . git
+  362  git add .git
+  363  git commit -m "2023-8-26Max"
+  364  git push -u origin "master"
+  365  git add .
+  366  git commit -m "2023-8-26Max---1.1.0version"
+  367  git push origin master
+  368  git clone https://gitee.com/nageoffer/12306.git
+  369  git clone https://github.com/keyonjerome/SpartanEmailSender.git
+  370  git clone git@github.com:keyonjerome/SpartanEmailSender.git
+  371  git clone git@github.com:cnting/BSTDemo.git
+  372  ls
+  373  git clone https://gitee.com/yidao620/springboot-bucket.git
+  374  cd /
+  375  ls
+  376  cd c:
+  377  cd /
+  378  pwd
+  379  cd /c:
+  380  cd c:
+  381  pwd
+  382  p
+  383  cd /desktop
+  384  cd C:
+  385  cd /dell
+  386  cd /user
+  387  /users
+  388  cd /Users
+  389  cd /c:
+  390  cd /c
+  391  cd /
+  392  cd ~
+  393  ls
+  394  cd /c
+  395  /users
+  396  cd /users
+  397  list
+  398  ls
+  399  users/
+  400  cd Users/
+  401  ls
+  402  cd dell/
+  403  ls
+  404  cd /c/users
+  405  ls
+  406  cd defaultuser1/
+  407  ls
+  408  cd desktop/
+  409  ls
+  410  mdkir msx
+  411  mkdir msx
+  412  ls
+  413  cp [200~C:\Users\dell\Pictures\Saved Pictures~ 
+  414  cp C:\Users\dell\Pictures\Saved Pictures\ -r
+  415  cd /msx
+  416  cd msx/
+  417  ls
+  418  cp C:\Users\dell\Desktop\ 
+  419  cp  --help
+  420  cp C:\Users\dell\Desktop
+  421  cp \C:\Users\dell\Desktop
+  422  cp /C:/Users/dell/Desktop
+  423  cd /C:/Users/dell/Desktop
+  424  cp /c:/users/dell
+  425  cd /c:/users/dell
+  426  cp C:\Users\defaultuser1\Pictures .
+  427  cp /C:/Users/defaultuser1/Pictures .
+  428  cd /C:/Users/defaultuser1/Pictures
+  429  cd /C/Users/defaultuser1/Pictures
+  430  cd /c/users/defaultuser1/desktop/msx 
+  431  cp /C/Users/defaultuser1/Pictures/* .
+  432  cp --help
+  433  cd /E/B/project/1/xueshengxinxiguanli/src/main/resources
+  434  ls
+  435  cd ..
+  436  cd /resource
+  437  cd ./resource
+  438  cd /resource
+  439  cd resource/
+  440  cd resources/
+  441  cd /c/users/defaultuser1/desktop/msx
+  442  ls
+  443  history
+  444  ls
+  445  ls
+  446  ls
+  447  sl
+  448  cd /E/B/project/1/xueshengxinxiguanli/src/main/resources
+  449  ls
+  450  cd filename.txt
+  451  cd .
+  452  cd ..
+  453  cd webapp/
+  454  cd jsp/
+  455  cd static/
+  456  cat filename.txt
+  457  cat LogSystem.txt
+  458  cd /E/B/project/1/xueshengxinxiguanli/src/main/webapp/jsp
+  459  cd rizhi/
+  460  cd modules/
+  461  cd rizhi/
+  462  ls
+  463  cd .../static/LogSystem.txt
+  464  cd ../static/
+  465  cd .../static
+  466  cd ...
+  467  cd ./
+  468  cd . ..
+  469  cd . .
+  470  cd ..
+  471  cd ...
+  472  cd rizhi/
+  473  cd ../../static
+  474  ls
+  475  cd modules/rizhi/
+  476  cd modules/rizhi
+  477  cd ../modules/
+  478  cd ../static
+  479  cat ../modules/LogSystem.txt
+  480  cd ../modules/rizhi
+  481  cat ../../static/LogSystem.txt
+  482  history 
+  483  cd /c/users/defaultuser1
+  484  ls
+  485  cd desktip/
+  486  cd desktop/
+  487  ls
+  488  touch 20213592-2023/09/10.docx
+  489  ls
+  490  cd msx/
+  491  touch 20213592-2023/09/10.docx
+  492  touch --help
+  493  touch msx.txt
+  494  rm msx.txt
+  495  touch 20213592-2023-9-10.docx
+  496  cat 20213592-2023-9-10.docx 
+  497  vim 20213592-2023-9-10.docx 
+  498  vim 20213592-2023-9-10.docx 
+  499  history >> 20213592-2023-9-10.docx 
+  500  cat 20213592-2023-9-10.docx 
+  501  cd /c/users/defaultuser/
+  502  cd /C/Users/defaultuser1/Desktop/msx
+  503  ls
+  504  touch 20213592-20230910.txt
+  505  vin 20213592-20230910.txt 
+  506  vim 20213592-20230910.txt 
+  507  cat 20213592-20230910.txt 
+  508  cd ..
+  509  mkdir msx1
+  510  ls
+  511  touch msx1/ 123.txt 
+  512  ls msx1/
+  513  touch --help
+  514  history > msx/20213592-20230910.txt 
+  515  cat msx/20213592-20230910.txt 
+  516  clean
+  517  clear
+  518  c
+  519  /c
+  520  clear
+  521  cd msx
+  522  vim 20213592-20230910.txt 
+  523  vim 20213592-20230910.txt 
+  524  cat 20213592-20230910.txt 
+  525  history >> 20213592-20230910.txt 
