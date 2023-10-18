@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<script src="H20213592-231011/videoResource.js">
+	</script>
+	<style>
+		body{
+			text-align: center;
+		}
+	</style>
+	<body>
+		<video src="teacherT/videoTemp/v02004040000bpa9p3egncoejcefuv4g" id="video"></video>
+		<div>
+			<input type="button" value="PLAY" id="play">
+			<input type="button" value="STOP" id="STOP">
+			<input type="button" value="PRE" id="PRE">
+			<input type="button" value="NEXT" id="NEXT">
+			<input type="text" value="0" id="videoNO"/>
+			<input type="button" value="search" id="search"/>
+		</div>
+	</body>
+	<script>
+		var video=document.getElementById("video");  /* 抓取video的对象,用于播放视频 */
+		var play=document.getElementById("play");	 /* 抓取video的对象,用于播放视频 */	 	
+		var stop=document.getElementById("STOP");	 /* 抓取video的对象,用于播放视频 */
+		var next=document.getElementById("NEXT");	 /* 抓取video的对象,用于播放视频 */
+		var preview=document.getElementById("PRE");  /* 抓取video的对象,用于播放视频 */
+		var videoNO=document.getElementById("videoNO"); /* 抓取video的对象,用于播放视频 */
+		var search=document.getElementById("search");	/* 抓取video的对象,用于播放视频 */
+		var i=0; /* 用于计算视频的演进位置,即第几个视频 */
+		/* 
+		
+		videoNO.value=i; 用于刷新视频的显示编号
+		 */
+		play.onclick=function(){
+			video.play();
+			videoNO.value=i;    
+		}
+		
+		stop.onclick=function(){
+			video.pause();
+		}
+		
+		next.onclick=function(){
+			i++;
+			if(i==118)
+			i=0;
+			video.src="teacherT/videoTemp/"+map4[i];
+			video.play();
+			videoNO.value=i;
+		}
+		
+		preview.onclick=function(){
+			if(i==0)
+			i=118;
+			i--;
+			video.src="teacherT/videoTemp/"+map4[i];
+			video.play();
+			videoNO.value=i;
+		}
+		
+		search.onclick=function(){
+			console.log(map4.length)
+				if(Number(videoNO.value)){
+				video.src="teacherT/videoTemp/"+map4[videoNO.value-1];
+				i=videoNO.value;
+				}
+				else{
+					alert("输入的是非数字,请重新输入");
+				}
+		}
+
+		
+	</script>
+</html>
