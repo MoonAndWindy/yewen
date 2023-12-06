@@ -10,69 +10,131 @@
 		body{
 			text-align: center;
 		}
+		div#logo{
+		font-size:80px;
+		background-color:green;
+		position:absolute;
+		right:0;
+		}
+		input#currentTime{
+		 font-size:20px;
+		background-color:red;
+		position:absolute;
+		left:0;
+		}
+		div#audioDiv{
+			margin-left: 40%;
+		}
 	</style>
 	<body>
-		<video src="teacherT/videoTemp/v02004040000bpa9p3egncoejcefuv4g" id="video"></video>
-		<div>
+		<!-- 右侧遮挡 -->
+		<div id="logo" >
+			No.1/118
+		</div>
+		<input type="text"value="0s"id="currentTime">
+		<video src="../media/mp4/v02004040000bpa9p3egncoejcefuv4g"  id="video"></video>
+		<div id="AnNiu">
 			<input type="button" value="PLAY" id="play">
 			<input type="button" value="STOP" id="STOP">
 			<input type="button" value="PRE" id="PRE">
 			<input type="button" value="NEXT" id="NEXT">
-			<input type="text" value="0" id="videoNO"/>
+			<input type="text" value="1" id="videoNO"/>
 			<input type="button" value="search" id="search"/>
+		</div>
+		<div id="YinPin">
+			<input type="button" value="ToAudio" id="change"/>
+		</div>
+		<div id="audioDiv">
+		<audio src="../media/mp3/cs1.mp3" id="audio" style="display: none;" controls></audio>
 		</div>
 	</body>
 	<script>
-		var video=document.getElementById("video");  /* 抓取video的对象,用于播放视频 */
-		var play=document.getElementById("play");	 /* 抓取video的对象,用于播放视频 */	 	
-		var stop=document.getElementById("STOP");	 /* 抓取video的对象,用于播放视频 */
-		var next=document.getElementById("NEXT");	 /* 抓取video的对象,用于播放视频 */
-		var preview=document.getElementById("PRE");  /* 抓取video的对象,用于播放视频 */
-		var videoNO=document.getElementById("videoNO"); /* 抓取video的对象,用于播放视频 */
-		var search=document.getElementById("search");	/* 抓取video的对象,用于播放视频 */
-		var i=0; /* 用于计算视频的演进位置,即第几个视频 */
-		/* 
+		var model = {};
+		model.ui = {};
+		model.ui.video=document.getElementById("video");  /* 抓取video的对象,用于播放视频 */
+		model.ui.play=document.getElementById("play");	 /* 抓取video的对象,用于播放视频 */	 	
+		model.ui.stop=document.getElementById("STOP");	 /* 抓取video的对象,用于播放视频 */
+		model.ui.next=document.getElementById("NEXT");	 /* 抓取video的对象,用于播放视频 */
+		model.ui.preview=document.getElementById("PRE");  /* 抓取video的对象,用于播放视频 */
+		model.ui.videoNO=document.getElementById("videoNO"); /* 抓取video的对象,用于播放视频 */
+		model.ui.audio=document.getElementById("audio"); /* 用于抓取audio */
+		model.ui.search=document.getElementById("search");	/* 抓取video的对象,用于播放视频 */
+		model.ui.change=document.getElementById("change"); /*用于抓取音频的转换按钮*/
+		model.ui.currentTime=document.getElementById("currentTime"); /* 抓取时间显示div */
+		model.ui.logo=document.getElementById("logo");
+		model.i=0; /* 用于计算视频的演进位置,即第几个视频 */
+		model.flag=true /* 用于标记音频和视频的交换 */
 		
+		
+		model.ui.video.style.width = document.body.clientWidth + 'px';
+		var vedioWidth = document.body.clientWidth;
+		/* 
 		videoNO.value=i; 用于刷新视频的显示编号
 		 */
-		play.onclick=function(){
+		window.setInterval(function(){
+		model.ui.currentTime.value=parseInt(model.ui.video.currentTime)+'s';
+		if (vedioWidth != document.body.clientWidth){
+			model.ui.video.style.width = document.body.clientWidth + "px";
+		}
+		 },1000);
+		
+		model.ui.play.onclick=function(){
 			video.play();
-			videoNO.value=i;    
+			videoNO.value=i+1;    
 		}
 		
-		stop.onclick=function(){
+		model.ui.stop.onclick=function(){
 			video.pause();
 		}
 		
-		next.onclick=function(){
-			i++;
-			if(i==118)
-			i=0;
-			video.src="teacherT/videoTemp/"+map4[i];
+		model.ui.next.onclick=function(){
+			model.i++;
+			if(model.i==118)
+			model.i=0;
+			video.src="../media/mp4/"+map4[model.i];
 			video.play();
-			videoNO.value=i;
+			videoNO.value=model.i + 1;
+			logo.innerText  = model.i + 1 + "/118";
 		}
 		
-		preview.onclick=function(){
-			if(i==0)
-			i=118;
-			i--;
-			video.src="teacherT/videoTemp/"+map4[i];
+		model.ui.preview.onclick=function(){
+			if(model.i==0)
+			model.i=118;
+			model.i--;
+			video.src="../media/mp4/"+map4[model.i];
 			video.play();
-			videoNO.value=i;
+			videoNO.value=model.i +1;
+			logo.innerText  = model.i + 1 + "/118";
 		}
 		
-		search.onclick=function(){
-			console.log(map4.length)
+		model.ui.search.onclick=function(){
 				if(Number(videoNO.value)){
-				video.src="teacherT/videoTemp/"+map4[videoNO.value-1];
-				i=videoNO.value;
+				video.src="../media/mp4/"+map4[videoNO.value-1];
+				model.i=Number(videoNO.value);
 				}
 				else{
 					alert("输入的是非数字,请重新输入");
 				}
 		}
 
-		
+		model.ui.change.onclick=function(){
+			if(model.flag){
+				change.value="ToVideo";
+				model.ui.audio.style.display = "block"; 
+				model.ui.video.style.display = "none";
+				model.ui.logo.style.display = "none";
+				model.ui.currentTime.style.display = "none";
+				alert("this is Audio");
+				model.flag = false;
+			}else{
+				change.value="ToAudio";
+				model.ui.audio.style.display = "none";
+				model.ui.video.style.display = "block";
+				model.ui.logo.style.display = "block";
+				model.ui.currentTime.style.display = "block";
+				alert("this is Video");
+				model.flag = true;
+			}
+		}
 	</script>
 </html>
