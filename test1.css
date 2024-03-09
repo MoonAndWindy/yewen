@@ -1,0 +1,24 @@
+*{
+	margin: 0;
+}
+main{
+	
+}
+main{
+	position: relative;
+}
+div#logo{
+	width: 50%;
+	position: absolute;
+	top: 5px;
+	right: 10px;
+}
+
+img{
+	max-width: 100%;
+}
+  
+img#yfy{
+	width:60%;
+	border:1px solid red ;
+}
